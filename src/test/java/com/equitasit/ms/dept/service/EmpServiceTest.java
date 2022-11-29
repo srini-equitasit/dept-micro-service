@@ -1,4 +1,4 @@
-package com.equitasit.ms.emp.service;
+package com.equitasit.ms.dept.service;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.equitasit.ms.emp.controller;
+package com.equitasit.ms.dept.controller;
 
 import static org.hamcrest.Matchers.containsString;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
@@ -77,7 +77,7 @@ class DeptControllerTest {
 				.perform(
 						put(baseUrl).content(mapper.writeValueAsBytes(deptDTO)).contentType(MediaType.APPLICATION_JSON))
 				.andDo(print()).andExpect(status().is2xxSuccessful())
-				.andExpect(content().string(containsString("1234")));
+				.andExpect(content().string(containsString("10")));
 	}
 
 	@Test

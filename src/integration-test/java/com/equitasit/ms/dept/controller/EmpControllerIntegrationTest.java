@@ -1,4 +1,4 @@
-package com.equitasit.ms.emp.controller;
+package com.equitasit.ms.dept.controller;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -103,7 +103,7 @@ class DeptControllerIntegrationTest {
 
 		headers.setContentType(MediaType.APPLICATION_JSON);
 
-		ResponseEntity<String> responseEntity = this.testRestTemplate.getForEntity(baseUrl + "/1234", String.class);
+		ResponseEntity<String> responseEntity = this.testRestTemplate.getForEntity(baseUrl + "/10", String.class);
 
 		Assertions.assertNotNull(responseEntity);
 
@@ -149,7 +149,7 @@ class DeptControllerIntegrationTest {
 
 		JsonNode tree = mapper.readTree(responseEntity.getBody());
 
-		Assertions.assertEquals(1234, tree.at("/0/deptno").asInt());
+		Assertions.assertEquals(10, tree.at("/0/deptno").asInt());
 	}
 
 	@Test
